@@ -16,6 +16,7 @@ class IgnoreRestTest extends Specification {
             1 == 1
     }
 
+    @IgnoreRest
     def "test 3"() {
         expect:
             1 == 1

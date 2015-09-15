@@ -1,9 +1,11 @@
 package com.blogspot.przybyszd.spock.mockingandstubing05
 import com.blogspot.przybyszd.spock.bean.PersonDao
 import com.blogspot.przybyszd.spock.dto.Person
+import com.blogspot.przybyszd.spock.configuration.Slow
 import org.springframework.jdbc.core.JdbcTemplate
 import spock.lang.Specification
 
+@Slow
 class MockTest extends Specification {
 
     JdbcTemplate jdbcTemplate = Mock(JdbcTemplate)

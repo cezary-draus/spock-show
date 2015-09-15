@@ -1,8 +1,10 @@
 package com.blogspot.przybyszd.spock.intro01
 
 import com.blogspot.przybyszd.spock.dto.Person
+import com.blogspot.przybyszd.spock.configuration.Slow
 import spock.lang.Specification
 
+@Slow
 class PersonTest extends Specification {
 
     def "should set first name from setter"() {
