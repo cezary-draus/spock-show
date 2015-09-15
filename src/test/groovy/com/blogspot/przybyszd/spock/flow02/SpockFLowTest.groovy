@@ -1,4 +1,4 @@
-package com.blogspot.przybyszd.spock.lifecycle02
+package com.blogspot.przybyszd.spock.flow02
 
 import com.blogspot.przybyszd.spock.dto.Person
 import spock.lang.Shared
@@ -6,7 +6,7 @@ import spock.lang.Specification
 import spock.lang.Stepwise
 
 @Stepwise
-class LifecycleSpockTest extends Specification {
+class SpockFLowTest extends Specification {
 
     @Shared
     StringWriter writer

@@ -1,17 +1,16 @@
-package com.blogspot.przybyszd.spock.spring06
+package com.blogspot.przybyszd.spock.spring
 
 import com.blogspot.przybyszd.spock.bean.PersonController
 import com.blogspot.przybyszd.spock.bean.PersonDao
 import com.blogspot.przybyszd.spock.bean.PersonValidationException
-import com.blogspot.przybyszd.spock.configuration.PersonContextConfiguration
 import com.blogspot.przybyszd.spock.dto.Person
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.test.context.ContextConfiguration
 import spock.lang.Specification
 import spock.lang.Unroll
 
-@ContextConfiguration(classes = PersonContextConfiguration)
-class PersonContextFromClassTest extends Specification {
+@ContextConfiguration(locations = "classpath:personContext.xml")
+class PersonContextFromXmlTest extends Specification {
     @Autowired
     PersonController personController
 

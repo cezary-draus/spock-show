@@ -5,6 +5,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class PersonValidator {
+
     public void validatePerson(Person person) {
         String firstName = person.getFirstName();
         if (firstName == null || firstName.length() == 0) {

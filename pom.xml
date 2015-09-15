@@ -21,6 +21,7 @@
         <spock.version>1.0-groovy-2.4</spock.version>
         <cglib.version>3.1</cglib.version>
         <objenesis.version>2.1</objenesis.version>
+        <lombok.version>1.16.4</lombok.version>
     </properties>
 
     <build>
