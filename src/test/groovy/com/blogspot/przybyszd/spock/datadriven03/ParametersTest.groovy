@@ -4,7 +4,6 @@ import com.blogspot.przybyszd.spock.dto.Person
 import spock.lang.Specification
 import spock.lang.Unroll
 
-
 class ParametersTest extends Specification {
 
     @Unroll
@@ -22,7 +21,7 @@ class ParametersTest extends Specification {
     }
 
     @Unroll
-    def "should set person data 2" (String firstName, String lastName, int age) {
+    def "should set person data 2"(String firstName, String lastName, int age) {
         when:
             Person person = new Person(lastName: lastName, firstName: firstName, age: age)
         then:
@@ -107,7 +106,7 @@ class ParametersTest extends Specification {
     @Unroll
     def "should check if person with age #person.age is adult => #adult"() {
         expect:
-            person.isAdult() == adult
+            person.adult == adult
         where:
             person              || adult
             new Person(age: 17) || false
@@ -118,7 +117,7 @@ class ParametersTest extends Specification {
     @Unroll
     def "should check if person is adult with list"() {
         expect:
-            new Person(age: age).isAdult() == adult
+            new Person(age: age).adult == adult
             ageSquare == age * age
         where:
             age << [17, 18, 19]
@@ -129,9 +128,9 @@ class ParametersTest extends Specification {
     @Unroll
     def "should check if person is adult with list 2"() {
         expect:
-            new Person(age: age).isAdult() == adult
+            new Person(age: age).adult == adult
         where:
-            [age, adult] << [[17,false], [18,true], [19, true]]
+            [age, adult] << [[17, false], [18, true], [19, true]]
     }
 
     @Unroll

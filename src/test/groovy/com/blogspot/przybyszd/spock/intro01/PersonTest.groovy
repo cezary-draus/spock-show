@@ -1,4 +1,5 @@
 package com.blogspot.przybyszd.spock.intro01
+
 import com.blogspot.przybyszd.spock.dto.Person
 import spock.lang.Specification
 

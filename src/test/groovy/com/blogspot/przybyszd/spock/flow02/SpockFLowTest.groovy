@@ -50,12 +50,6 @@ class SpockFLowTest extends Specification {
             person.lastName == "Smith"
     }
 
-    def "should check age"() {
-        println "should check age"
-        expect:
-            person.age == 21
-    }
-
     @Unroll
     def "should use full flow"() {
         given: "alias for setup"
