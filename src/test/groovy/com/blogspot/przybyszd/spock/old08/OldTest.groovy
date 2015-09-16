@@ -1,4 +1,4 @@
-package com.blogspot.przybyszd.spock.old11
+package com.blogspot.przybyszd.spock.old08
 
 import spock.lang.Specification
 

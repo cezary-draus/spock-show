@@ -1,4 +1,4 @@
-package com.blogspot.przybyszd.spock.annotations08
+package com.blogspot.przybyszd.spock.annotations07
 
 import com.blogspot.przybyszd.spock.bean.PersonDao
 import org.springframework.jdbc.core.JdbcTemplate

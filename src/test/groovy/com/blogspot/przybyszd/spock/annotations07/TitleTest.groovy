@@ -1,4 +1,4 @@
-package com.blogspot.przybyszd.spock.annotations08
+package com.blogspot.przybyszd.spock.annotations07
 
 import spock.lang.Specification
 import spock.lang.Title

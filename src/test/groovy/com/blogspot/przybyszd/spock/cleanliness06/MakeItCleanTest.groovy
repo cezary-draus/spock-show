@@ -1,4 +1,4 @@
-package com.blogspot.przybyszd.spock.cleanliness07
+package com.blogspot.przybyszd.spock.cleanliness06
 
 import com.blogspot.przybyszd.spock.bean.PersonDao
 import com.blogspot.przybyszd.spock.dto.Person
