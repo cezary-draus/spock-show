@@ -1,4 +1,4 @@
-package com.blogspot.przybyszd.spock.parameters03
+package com.blogspot.przybyszd.spock.datadriven03
 
 import com.blogspot.przybyszd.spock.dto.Person
 import groovy.sql.Sql

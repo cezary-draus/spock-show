@@ -1,4 +1,4 @@
-package com.blogspot.przybyszd.spock.parameters03
+package com.blogspot.przybyszd.spock.datadriven03
 
 import com.blogspot.przybyszd.spock.dto.Person
 import spock.lang.Specification
@@ -22,7 +22,7 @@ class ParametersTest extends Specification {
     }
 
     @Unroll
-    def "should set person data 2"(String firstName, String lastName, int age) {
+    def "should set person data 2" (String firstName, String lastName, int age) {
         when:
             Person person = new Person(lastName: lastName, firstName: firstName, age: age)
         then:
@@ -140,9 +140,24 @@ class ParametersTest extends Specification {
             Person person = new Person(firstName: firstName)
         then:
             person.firstName == firstName
+            person.firstName.length() == length
         where:
             firstName | _
             "John"    | _
             "Jan"     | _
+
+            length = firstName.length()
+    }
+
+    @Unroll
+    def "should use custom assertions"() {
+        when:
+            Person person = new Person(firstName: firstName, lastName: "Doe")
+        then:
+            customAssertion.call(person)
+        where:
+            firstName | customAssertion
+            "John"    | { it.firstName == "John" }
+            "Jan"     | { Person p -> p.lastName == "Doe" }
     }
 }

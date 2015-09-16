@@ -1,4 +1,4 @@
-package com.blogspot.przybyszd.spock.async10
+package com.blogspot.przybyszd.spock.async
 
 import spock.lang.Specification
 import spock.util.concurrent.PollingConditions

@@ -4,6 +4,7 @@ import com.blogspot.przybyszd.spock.dto.Person
 import spock.lang.Shared
 import spock.lang.Specification
 import spock.lang.Stepwise
+import spock.lang.Unroll
 
 @Stepwise
 class SpockFLowTest extends Specification {
@@ -54,4 +55,28 @@ class SpockFLowTest extends Specification {
         expect:
             person.age == 21
     }
+
+    @Unroll
+    def "should use full flow"() {
+        given: "alias for setup"
+            println "Setup fixture"
+        when:
+            println "stimulus"
+        then:
+            println "check results"
+        and:
+            println "and check another results $parameter"
+        when:
+            println "second stimulus"
+        then:
+            println "check second results"
+        expect:
+            println "next expect"
+        cleanup:
+            println "cleanup"
+        where:
+            parameter << ["the first parameter", "the second parameter"]
+
+    }
+
 }

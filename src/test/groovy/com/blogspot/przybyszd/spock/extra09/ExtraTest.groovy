@@ -5,7 +5,7 @@ import spock.lang.Specification
 import java.lang.Void as Should
 
 
-class ShouldReplacementTest extends Specification {
+class ExtraTest extends Specification {
 
     void "should set first name from constructor"() {
         when:
@@ -20,5 +20,7 @@ class ShouldReplacementTest extends Specification {
         then:
             person.firstName == "Bob"
     }
+
+
 
 }
